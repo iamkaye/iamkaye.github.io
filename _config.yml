@@ -1,0 +1,11 @@
+# Site settings
+title: "Learn English - Hire a private English Tutor today!"
+phone: "+(63) 932-763-5395"
+tel: "tel:+639327635395"
+email: "iamkaye00@gmail.com"
+location: "Cebu, Philippines"
+description: "Learn English - Hire a private English Tutor today!"
+url: "http://iamkaye.io"
+
+# Build settings
+markdown: kramdown

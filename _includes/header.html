@@ -1,0 +1,32 @@
+<header class="site-header" id="header" role="banner">
+    <div class="header-content boxy boxy-full medium-boxy-1of2">
+        <div class="divvy">
+            <h1 class="site-title"><a href="/"></a><span>Want to learn English?</span></h1>
+        </div>
+        <div class="divvy">
+            <nav class="site-navigation open" id="nav" role="navigation">
+                <h2>Site Navigation</h2>
+                <a class="nav-toggle icon-menu2" id="nav-toggle"></a>
+                <ul class="nav-anchor boxy boxy-full medium-boxy-custom">
+                    <li class="divvy">
+                        {% if page.away %}
+                        {{ "<a href='/#hire-me'>Hire me!</a>" }}
+                        {% else %}
+                        {{ "<a href='#hire-me'>Hire me!</a>" }}
+                        {% endif %}
+                    </li>
+                    <li class="divvy">
+                        {% if page.away %}
+                        {{ "<a href='/#why-me'>Why me?</a>" }}
+                        {% else %}
+                        {{ "<a href='#why-me'>Why me?</a>" }}
+                        {% endif %}
+                    </li>
+                    <li class="divvy">
+                        <a href="{{ "/about/" | prepend: site.baseurl }}">About me.</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

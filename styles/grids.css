@@ -1,0 +1,259 @@
+/* GRID CONTAINER */
+.boxy {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    text-rendering: optimizespeed;
+    width: 100%;
+}
+
+/* FLEX-DIRECTION - COLUMN */
+.boxy-column {
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+/* ALIGN-ITEMS */
+.boxy-align-top {
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+}
+.boxy-align-bottom {
+    -ms-flex-align: end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+.boxy-align-center {
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.boxy-align-baseline {
+    -ms-flex-align: baseline;
+    -webkit-align-items: baseline;
+    align-items: baseline;
+}
+.boxy-align-stretch {
+    -ms-flex-align: stretch;
+    -webkit-align-items: stretch;
+    align-items: stretch;
+}
+
+/* GRID ITEMS */
+.boxy > .divvy {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-rendering: auto;
+}
+
+/* FLUID IMAGE */
+.divvy-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.boxy-fit > .divvy {
+    -ms-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.boxy-custom > .divvy {
+    -ms-flex: none;
+    -webkit-flex: none;
+    flex: none;
+}
+.boxy-full > .divvy {
+    -ms-flex: 0 0 100%;
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+}
+.boxy-1of2 > .divvy {
+    -ms-flex: 0 0 50%;
+    -webkit-flex: 0 0 50%;
+    flex: 0 0 50%;
+}
+.boxy-1of3 > .divvy {
+    -ms-flex: 0 0 33.3333%;
+    -webkit-flex: 0 0 33.3333%;
+    flex: 0 0 33.3333%;
+}
+.boxy-1of4 > .divvy {
+    -ms-flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
+    flex: 0 0 25%;
+}
+.boxy-1of5 > .divvy {
+    -ms-flex: 0 0 20%;
+    -webkit-flex: 0 0 20%;
+    flex: 0 0 20%;
+}
+
+/* SMALL SCREEN */
+@media (min-width: 30em) {
+    .small-boxy-fit > .divvy {
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    .small-boxy-custom > .divvy {
+        -ms-flex: none;
+        -webkit-flex: none;
+        flex: none;
+    }
+    .small-boxy-full > .divvy {
+        -ms-flex: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    .small-boxy-1of2 > .divvy {
+        -ms-flex: 0 0 50%;
+        -webkit-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+    .small-boxy-1of3 > .divvy {
+        -ms-flex: 0 0 33.3333%;
+        -webkit-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+    .small-boxy-1of4 > .divvy {
+        -ms-flex: 0 0 25%;
+        -webkit-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+    .small-boxy-1of5 > .divvy {
+        -ms-flex: 0 0 20%;
+        -webkit-flex: 0 0 20%;
+        flex: 0 0 20%;
+    }
+}
+
+/* MEDIUM SCREEN */
+@media (min-width: 48em) {
+    .medium-boxy-fit > .divvy {
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    .medium-boxy-custom > .divvy {
+        -ms-flex: none;
+        -webkit-flex: none;
+        flex: none;
+    }
+    .medium-boxy-full > .divvy {
+        -ms-flex: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    .medium-boxy-1of2 > .divvy {
+        -ms-flex: 0 0 50%;
+        -webkit-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+    .medium-boxy-1of3 > .divvy {
+        -ms-flex: 0 0 33.3333%;
+        -webkit-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+    .medium-boxy-1of4 > .divvy {
+        -ms-flex: 0 0 25%;
+        -webkit-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+    .medium-boxy-1of5 > .divvy {
+        -ms-flex: 0 0 20%;
+        -webkit-flex: 0 0 20%;
+        flex: 0 0 20%;
+    }
+}
+
+/* LARGE SCREEN */
+@media (min-width: 75em) {
+    .large-boxy-fit > .divvy {
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+    }
+    .large-boxy-custom > .divvy {
+        -ms-flex: none;
+        -webkit-flex: none;
+        flex: none;
+    }
+    .large-boxy-full > .divvy {
+        -ms-flex: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        flex: 0 0 100%;
+    }
+    .large-boxy-1of2 > .divvy {
+        -ms-flex: 0 0 50%;
+        -webkit-flex: 0 0 50%;
+        flex: 0 0 50%;
+    }
+    .large-boxy-1of3 > .divvy {
+        -ms-flex: 0 0 33.3333%;
+        -webkit-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+    }
+    .large-boxy-1of4 > .divvy {
+        -ms-flex: 0 0 25%;
+        -webkit-flex: 0 0 25%;
+        flex: 0 0 25%;
+    }
+    .large-boxy-1of5 > .divvy {
+        -ms-flex: 0 0 20%;
+        -webkit-flex: 0 0 20%;
+        flex: 0 0 20%;
+    }
+}
+
+/** GRID ALTERNATIVE */
+.no-flexbox .boxy {
+    letter-spacing: -0.31em;
+}
+
+.no-flexbox .boxy > .divvy {
+    display: inline-block;
+    position: relative;
+    letter-spacing: normal;
+    vertical-align: top;
+}
+
+.no-flexbox .boxy-full > .divvy { width: 100%; }
+.no-flexbox .boxy-1of2 > .divvy { width: 50%; }
+.no-flexbox .boxy-1of3 > .divvy { width: 33.3333%; }
+.no-flexbox .boxy-1of4 > .divvy { width: 25%; }
+.no-flexbox .boxy-1of5 > .divvy { width: 20%; }
+
+/* SMALL SCREEN */
+@media (min-width: 20em) {
+    .no-flexbox .small-boxy-full > .divvy { width: 100%; }
+    .no-flexbox .small-boxy-1of2 > .divvy { width: 50%; }
+    .no-flexbox .small-boxy-1of3 > .divvy { width: 33.3333%; }
+    .no-flexbox .small-boxy-1of4 > .divvy { width: 25%; }
+    .no-flexbox .small-boxy-1of5 > .divvy { width: 20%; }
+}
+
+/* MEDIUM SCREEN */
+@media (min-width: 48em) {
+    .no-flexbox .medium-boxy-full > .divvy { width: 100%; }
+    .no-flexbox .medium-boxy-1of2 > .divvy { width: 50%; }
+    .no-flexbox .medium-boxy-1of3 > .divvy { width: 33.3333%; }
+    .no-flexbox .medium-boxy-1of4 > .divvy { width: 25%; }
+    .no-flexbox .medium-boxy-1of5 > .divvy { width: 20%; }
+}
+
+/* LARGE SCREEN */
+@media (min-width: 75em) {
+    .no-flexbox .large-boxy-full > .divvy { width: 100%; }
+    .no-flexbox .large-boxy-1of2 > .divvy { width: 50%; }
+    .no-flexbox .large-boxy-1of3 > .divvy { width: 33.3333%; }
+    .no-flexbox .large-boxy-1of4 > .divvy { width: 25%; }
+    .no-flexbox .large-boxy-1of5 > .divvy { width: 20%; }
+}

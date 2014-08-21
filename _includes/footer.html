@@ -1,0 +1,29 @@
+<footer class="site-footer" id="footer" role="contentinfo">
+    <div class="footer-content boxy boxy-full medium-boxy-1of2">
+        <div class="divvy">
+            <p>Quick Links</p>
+            <ul class="quick-links">
+                <li>
+                    {% if page.away %}
+                    {{ "<a href='/#hire-me'>Hire me!</a>" }}
+                    {% else %}
+                    {{ "<a href='#hire-me'>Hire me!</a>" }}
+                    {% endif %}
+                </li>
+                <li>
+                    {% if page.away %}
+                    {{ "<a href='/#why-me'>Why me?</a>" }}
+                    {% else %}
+                    {{ "<a href='#why-me'>Why me?</a>" }}
+                    {% endif %}
+                </li>
+                <li>
+                    <a href="{{ "/about/" | prepend: site.baseurl }}">About Me.</a>
+                </li>
+            </ul>
+        </div>
+        <div class="divvy">
+            <p class="author">Website built with love by Kinah Watts.</p>
+        </div>
+    </div>
+</footer>
