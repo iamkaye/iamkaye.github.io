@@ -1,0 +1,605 @@
+/* HEADER STYLES */
+.site-header {
+    background-color: #2d2d2d;
+    position: relative;
+    overflow: hidden;
+}
+.header-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.site-title {
+    margin: 0;
+    padding: .5em 0;
+}
+.site-title a {
+    display: block;
+    color: #f7f7f7;
+    text-transform: lowercase;
+    width: 2.7em;
+}
+.site-title a:before {
+    content: 'kaye.';
+}
+.site-title span {
+    display: none;
+}
+.site-navigation {
+    height: 0;
+}
+.site-navigation.open {
+    height: auto;
+}
+.site-navigation h2 {
+    display: none;
+}
+.nav-anchor {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 .5em;
+}
+.nav-anchor li {
+    border-top: 1px dashed #444;
+}
+.nav-anchor li:first-child {
+    border: none;
+}
+.nav-anchor li a {
+    display: block;
+    color: #d9d9d9;
+    padding: .5em 0;
+}
+.nav-anchor li a:hover {
+    color: #f5680e;
+}
+.nav-toggle {
+    position: absolute;
+    top: 1.09em;
+    right: 1.18em;
+    font-size: 1.375em;
+    color: #545454;
+    cursor: pointer;
+}
+.goto-top {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: .1em;
+    font-size: 2.5em;
+    opacity: .7;
+    padding: .12em .2em;
+    cursor: pointer;
+}
+    /* At >=1100px move a bit */
+    @media screen and (min-width: 68.75em) {
+        .goto-top {
+            font-size: 3em;
+            bottom: .4em;
+            right: .6em;
+        }
+    }
+
+/* STREAMER STYLES */
+.site-streamer {
+    background-color: #4fb84f;
+    overflow: auto;
+}
+.streamer-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+.question,
+.solution {
+    font-size: 1.375em;
+    color: #f9f9f9;
+    text-align: center;
+    margin: 0;
+}
+.question {
+    font-size: 3em;
+    margin: 0 0 .25em;
+}
+.solution span {
+    color: #ff0;
+    text-transform: capitalize;
+}
+
+/* HIRE ME STYLES */
+.hire-me {
+    background-color: #f1f1f1;
+    overflow: auto;
+}
+.hireMe-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+.hire-me h2,
+.hire-me p {
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #454545;
+    text-align: center;
+    margin: 0;
+}
+.hire-me h2 {
+    font-size: 2em;
+}
+.lessons {
+    margin-top: 2em;
+}
+.lessons > .divvy {
+    padding: .5em;
+}
+.speech, .grammar, .reading, .writing {
+    padding: 1em;
+}
+.speech {
+    background-color: #d63c42;
+    background-color: rgba(209,29,36,.85);
+}
+.grammar {
+    background-color: #fad747;
+    background-color: rgba(251,210,42,.85);
+}
+.reading {
+    background-color: #24cee2;
+    background-color: rgba(0,199,223,.85);
+}
+.writing {
+    background-color: #f57c2f;
+    background-color: rgba(245,104,14,.85);
+}
+.speech p,
+.grammar p,
+.reading p,
+.writing p {
+    font-size: 1.5em;
+    color: #fff;
+    text-indent: .6em;
+    margin: 0;
+    padding: 1.25em 0;
+    width: 66.6667%;
+}
+.speech span,
+.grammar span,
+.reading span,
+.writing span {
+    font-size: 2.5em;
+    color: #f7f7f7;
+    text-align: center;
+    padding: .5em 0;
+    width: 33.3333%;
+}
+
+/* WHY ME STYLES */
+.why-me {
+    background-color: #d1d1d1;
+    overflow: auto;
+}
+.whyMe-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+.whyMe-content > .divvy {
+    padding: 1em;
+}
+.whyMe-title,
+.whyMe-aim {
+    font-size: 2em;
+    font-weight: 400;
+    color: #f5680e;
+    text-align: center;
+    margin: 0 0 1em;
+}
+.whyMe-reasons {
+    color: #797979;
+    background-color: #dfdfdf;
+    border-left: 5px solid;
+    width: 90%;
+    margin: 0 auto .75em;
+    padding: .65em;
+}
+.whyMe-reasons.blue {
+    border-color: #00c7df;
+}
+.whyMe-reasons.orange {
+    border-color: #f5680e;
+}
+.whyMe-reasons.green {
+    border-color: #4fb84f;
+}
+.whyMe-reasons.yellow {
+    border-color: #fbd22a;
+}
+.whyMe-aim {
+    color: #50b848;
+    margin-bottom: .5em;
+}
+.whyMe-purpose {
+    position: relative;
+    font-size: 1em;
+    color: #696969;
+    text-align: center;
+    width: 15.625em;
+    margin: 0 auto;
+}
+.whyMe-purpose span {
+    position: absolute;
+    top: -.625em;
+    left: -.09375em;
+    font-size: 2em;
+    color: #50b848;
+
+    -webkit-transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+
+/* CONTACT STYLES */
+.contact {
+    background-color: #252525;
+    overflow: auto;
+}
+.contact h2 {
+    display: none;
+}
+.contact-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+.contact-content > .divvy {
+    width: 100%;
+    padding: 1em;
+}
+    /* At >=600px make 2 columns */
+    @media screen and (min-width: 37.5em) {
+        .contact-content > .divvy {
+            width: 50%;
+        }
+    }
+.contact a {
+    display: block;
+    color: #f9f9f9;
+    text-align: center;
+    vertical-align: middle;
+}
+.contact a span {
+    font-size: 2em;
+    padding: 0 .5em 0 0;
+    vertical-align: middle;
+}
+.contact a:hover {
+    color: #f5680e;
+}
+
+/* FOOTER STYLES */
+.site-footer {
+    background-color: #2d2d2d;
+    overflow: auto;
+}
+.footer-content {
+    width: 100%;
+    max-width: 62.5em;
+    margin: 2em auto;
+    padding: 0 1.5em;
+}
+.footer-content > .divvy {
+    padding: 1em;
+}
+.footer-content p {
+    font-size: .9em;
+    color: #696969;
+    text-align: center;
+    margin: 0 0 .75em;
+}
+.quick-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.quick-links li {
+    padding: .125em;
+}
+.quick-links li a {
+    display: block;
+    font-size: .85em;
+    color: #494949;
+    text-align: center;
+    width: 7.35em;
+    margin: 0 auto;
+    padding: 0.4em;
+}
+.quick-links li a:hover {
+    color: #a9a9a9;
+}
+.footer-content .author {
+    margin: 1em 0;
+}
+
+/* ABOUT ME STYLES */
+.about-me {
+    background-color: #2d2d2d;
+}
+.aboutMe-content {
+    background-color: #4fb84f;
+    width: 100%;
+    max-width: 62.5em;
+    margin: 0 auto;
+}
+.profile {
+    padding: 2em 1.5em;
+}
+.profile > .divvy {
+    width: 100%;
+}
+.profile-pic {
+    background: url(../images/kaye.jpg) no-repeat 100% 100%;
+    width: 12.5em;
+    height: 12.5em;
+    margin: 1em auto;
+    -webkit-border-radius: 6.25em;
+    -moz-border-radius: 6.25em;
+    border-radius: 6.25em;
+}
+.profile h2 {
+    font-weight: 400;
+    color: #f9f9f9;
+    text-align: center;
+    text-transform: lowercase;
+    margin: 0 0 1em;
+}
+.profile a {
+    display: block;
+    color: #f9f9f9;
+    width: 15em;
+    margin: 0 auto;
+}
+.profile a span {
+    font-size: 2em;
+    padding: 0 .25em 0 0;
+    vertical-align: middle;
+
+    -webkit-transition: 250ms linear all;
+    -moz-transition: 250ms linear all;
+    -o-transition: 250ms linear all;
+    transition: 250ms linear all;
+}
+.profile a:hover span {
+    color: #ff0;
+}
+    /* At 600px make to columns */
+    @media screen and (min-width: 37.5em) {
+        .profile > .divvy {
+            width: 50%;
+        }
+        .profile h2 {
+            margin: 0;
+        }
+        .profile a:first-child {
+            margin-top: 4.5em;
+        }
+    }
+.story {
+    background-color: #eaeaea;
+    padding: 2em 2.75em;
+}
+.story h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #f5680e;
+    margin: 1em 0;
+}
+.story p,
+.story li {
+    color: #696969;
+    line-height: 1.7;
+}
+.story ul {
+    list-style: circle;
+}
+.story li {
+    padding-left: .5em;
+}
+
+/* SMALL SCREEN */
+@media screen and (min-width: 30em) {
+
+    /* HIRE ME STYLES */
+    .speech p,
+    .grammar p,
+    .reading p,
+    .writing p {
+        text-align: center;
+        text-indent: 0;
+        padding-top: .5em;
+    }
+}
+
+/* MEDIUM SCREEN */
+@media screen and (min-width: 48em) {
+
+    /* HEADER STYLES */
+    .nav-toggle { display: none; }
+    .site-navigation { height: auto; }
+    .nav-anchor li {
+        border: none;
+    }
+
+    .header-content {
+        padding: 0 2em;
+    }
+    .nav-anchor {
+        padding: 1.5em 0 0;
+    }
+    .nav-anchor.boxy {
+        justify-content: flex-end;
+    }
+    .nav-anchor li {
+        padding: 0 0 0 1em;
+    }
+
+    /* STREAMER STYLES */
+    .streamer-content {
+        margin: 3em auto;
+        padding: 0 2em;
+    }
+    .question {
+        font-size: 4em;
+        margin: 0 0 .18em;
+    }
+    .solution {
+        font-size: 1.5em;
+    }
+
+    /* HIRE ME STYLES */
+    .hire-me h2 {
+        font-size: 2.5em;
+    }
+    .hire-me p {
+        font-size: 1.5em;
+    }
+    .speech p,
+    .grammar p,
+    .reading p,
+    .writing p {
+        font-size: 1.75em;
+        text-align: left;
+        text-indent: .75em;
+        width: 60%;
+        padding: 1.5em 0;
+    }
+    .speech span,
+    .grammar span,
+    .reading span,
+    .writing span {
+        font-size: 3em;
+        width: 40%;
+    }
+
+    /* WHY ME STYLES */
+    .whyMe-title {
+        font-size: 2.5em;
+        text-align: left;
+        margin-bottom: .5em;
+    }
+    .whyMe-reasons {
+        width: 100%;
+        margin: 0 0 .75em;
+    }
+    .whyMe-aim {
+        font-size: 2.5em;
+        margin-top: 1.75em;
+    }
+
+    /* FOOTER STYLES */
+    .footer-content p {
+        text-align: left;
+        padding-left: 1em;
+    }
+    .quick-links li a {
+        text-align: left;
+        margin: 0;
+        padding-left: 1.06em;
+    }
+    .quick-links li a:hover {
+        color: #a9a9a9;
+    }
+    .footer-content .author {
+        text-align: right;
+        margin: 0;
+        padding: 0 1em 0 0;
+    }
+
+    /* ABOUT ME STYLES */
+    .aboutMe-content > .divvy:first-child {
+        width: 40%;
+    }
+    .aboutMe-content > .divvy:last-child {
+        width: 60%;
+    }
+    .profile h2 {
+        margin: 0 0 1em;
+    }
+    .profile a:first-child,
+    .profile a {
+        margin: 0 auto;
+    }
+}
+
+/* LARGE SCREEN */
+@media screen and (min-width: 75em) {
+
+    /* HEADER STYLES */
+    .site-title {
+        font-size: 2.5em;
+    }
+    .nav-anchor {
+        padding-top: 2em;
+    }
+    .nav-anchor li a {
+        font-size: 1.125em;
+    }
+
+    /* STREAMER STYLES */
+    .streamer-content {
+        margin: 4em auto;
+        padding: 0 2em;
+    }
+    .question {
+        font-size: 5em;
+        margin: 0 0 .18em;
+    }
+    .solution {
+        font-size: 2em;
+    }
+
+    /* HIRE ME STYLES */
+    .speech p,
+    .grammar p,
+    .reading p,
+    .writing p {
+        text-align: center;
+        text-indent: 0;
+        padding-top: .5em;
+    }
+    .speech span,
+    .grammar span,
+    .reading span,
+    .writing span {
+        font-size: 3.5em;
+    }
+}
+
+/* This will be used for jQuery browser size detection */
+.sm, .md, .lg {
+    display: none;
+    height: 0;
+    width: 0;
+}
+.sm {
+    display: block;
+}
+@media screen and (min-width: 48em) {
+    /* Change display value from none to block. */
+    .md { display: block; }
+    /* Change display value from block to none. */
+    .sm { display: none; }
+}
+@media screen and (min-width: 75em) {
+    /* Change display value from none to block. */
+    .lg { display: block; }
+    /* Change display value from block to none. */
+    .md { display: none; }
+}

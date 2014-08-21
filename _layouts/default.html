@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+    {% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <a class="goto-top icon-arrow-up" href="#header" title="Back to Top"></a>
+    <span class="sm"></span><span class="md"></span><span class="lg"></span>
+
+    <script src="{{ "/scripts/jquery-1.11.1.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/scripts/kaye.min.js" | preped: site.baseurl }}"></script>
+</body>
+</html>
