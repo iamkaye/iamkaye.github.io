@@ -1,0 +1,54 @@
+// Site Streamer
+
+.site-streamer {
+    background-color: $green;
+    overflow: auto;
+
+    &Constraint {
+        @extend %constraint;
+    }
+
+    @at-root .question {
+        font-size: 3em;
+        font-weight: normal;
+        color: $white;
+        text-align: center;
+        margin: 0 0 .25em;
+    }
+    @at-root .solution {
+        @extend .question;
+        font-size: 1.375em;
+        margin: 0;
+
+        span {
+            color: #ff0;
+            text-transform: capitalize;
+        }
+    }
+}
+@include media_query(48em) {
+    .site-streamerConstraint {
+        margin: 3em auto;
+        padding: 0 2em;
+
+        @at-root .question {
+            font-size: 4em;
+            margin: 0 0 .18em;
+        }
+        @at-root .solution {
+            font-size: 1.5em;
+        }
+    }
+}
+@include media_query(75em) {
+    .site-streamerConstraint {
+        margin: 4em auto;
+
+        @at-root .question {
+            font-size: 5em;
+        }
+        @at-root .solution {
+            font-size: 2em;
+        }
+    }
+}

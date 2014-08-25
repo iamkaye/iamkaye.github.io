@@ -1,29 +1,21 @@
 <footer class="site-footer" id="footer" role="contentinfo">
-    <div class="footer-content boxy boxy-full medium-boxy-1of2">
-        <div class="divvy">
+    <div class="site-footerConstraint">
+        <div class="footer-links">
             <p>Quick Links</p>
             <ul class="quick-links">
                 <li>
-                    {% if page.away %}
-                    {{ "<a href='/#hire-me'>Hire me!</a>" }}
-                    {% else %}
-                    {{ "<a href='#hire-me'>Hire me!</a>" }}
-                    {% endif %}
+                    <a href="{% if page.away %}{{ "/#hire-me" | prepend: site.url }}{% else %}{{ "#hire-me" }}{% endif %}">Hire me!</a>
                 </li>
                 <li>
-                    {% if page.away %}
-                    {{ "<a href='/#why-me'>Why me?</a>" }}
-                    {% else %}
-                    {{ "<a href='#why-me'>Why me?</a>" }}
-                    {% endif %}
+                    <a href="{% if page.away %}{{ "/#why-me" | prepend: site.url }}{% else %}{{ "#why-me" }}{% endif %}">Why me?</a>
                 </li>
                 <li>
-                    <a href="{{ "/about/" | prepend: site.baseurl }}">About Me.</a>
+                    <a href="{{ "/about" | prepend: site.url }}">About me.</a>
                 </li>
             </ul>
         </div>
-        <div class="divvy">
-            <p class="author">Website built with love by Kinah Watts.</p>
+        <div class="authorship">
+            <p class="author">Website built with love by {{ site.author }}.</p>
         </div>
     </div>
 </footer>

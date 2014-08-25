@@ -1,0 +1,130 @@
+// About me styles
+
+.about-me {
+    background-color: $black;
+    overflow: auto;
+
+    @at-root .aboutMe-constraint {
+        @extend %constraint;
+        @extend %grid;
+        background-color: $green;
+        margin: 0 auto;
+        padding: 0;
+
+        >.aboutMe-items {
+            @extend %grid_item;
+            @include width(1);
+
+            @include media_query(48em) {
+                &:first-child {
+                    @include width(2/5);
+                }
+                &:last-child {
+                    @include width(3/5);
+                }
+            }
+        }
+    }
+
+    @at-root .profile {
+        @extend %grid;
+        padding: 2em 0;
+
+        >.profile-items {
+            @extend %grid_item;
+            @include width(1);
+        }
+
+        &-pic {
+            background: url(../images/kaye.jpg) no-repeat 100% 100%;
+            width: 12.5em;
+            height: 12.5em;
+            margin: 1em auto;
+            @include prefix((
+                    "border-radius": 6.25em
+                ));
+        }
+
+        h2 {
+            font-weight: normal;
+            color: $white;
+            text-align: center;
+            text-transform: lowercase;
+            margin: 0 0 1em;
+        }
+
+        a {
+            display: block;
+            color: $white;
+            text-align: center;
+            max-width: 17em;
+            margin: 0 auto;
+            padding: .25em 0;
+
+            &:hover span {
+                color: #ff0;
+            }
+        }
+
+        span {
+            font-size: 2em;
+            padding: 0 .25em 0 0;
+            vertical-align: middle;
+            @include prefix((
+                    "transition": 250ms linear all
+                ));
+        }
+
+        @include media_query(37.5em) {
+            >.profile-items {
+                @include width(1/2);
+            }
+            h2 {
+                margin: 0;
+            }
+            a {
+                text-align: left;
+                &:first-child {
+                    margin-top: 4.5em;
+                }
+            }
+        }
+
+        @include media_query(48em) {
+            >.profile-items {
+                @include width(1);
+            }
+            h2 {
+                margin: 0 0 1em;
+            }
+            a:first-child {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @at-root .story {
+        background-color: darken($white, 6%);
+        padding: 2em 2.75em;
+
+        h3 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: $orange;
+            margin: 1em 0;
+        }
+
+        p, li {
+            font-size: 1.08em;
+            color: lighten($black, 23.5%);
+            line-height: 1.7;
+        }
+
+        ul {
+            list-style: circle;
+        }
+        li {
+            padding-left: .5em;
+        }
+    }
+}

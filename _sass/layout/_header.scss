@@ -1,0 +1,153 @@
+// Header styles
+
+.site-header {
+    background-color: $black;
+    position: relative;
+    overflow: hidden;
+
+    &Constraint {
+        @extend %grid;
+        @extend %constraint;
+        margin: 0 auto;
+    }
+}
+@include media_query(48em) {
+    .site-headerConstraint{
+        padding: 0 2em;
+    }
+}
+
+.site-banner {
+    @extend %grid_item;
+    @include width(1);
+
+    @at-root .site-title {
+        margin: 0;
+        padding: .5em 0;
+
+        a {
+            display: block;
+            color: $white;
+            text-transform: lowercase;
+            width: 2.7em;
+        }
+    }
+
+    @at-root .nav-toggle {
+        position: absolute;
+        top: .59em;
+        right: 0;
+        padding: .5em;
+        font-size: 1.375em;
+        color: #545454;
+        cursor: pointer;
+    }
+}
+@include media_query(48em) {
+    .site-banner {
+        @include width(1/2);
+
+        @at-root .nav-toggle{
+            display: none;
+        }
+    }
+}
+@include media_query(75em) {
+    .site-title {
+        font-size: 2.5em;
+    }
+}
+
+.site-navigation {
+    @extend %grid_item;
+    @include width(1);
+    height: 0;
+    display: block;
+
+    &.is-open {
+        height: auto;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    @at-root .nav-anchor {
+        @extend %grid;
+        list-style: none;
+        margin: 0;
+        padding: 0 0 .5em;
+
+        >li {
+            @extend %grid_item;
+            @include width(1);
+            border-top: 1px dashed lighten($black, 10%);
+
+            &:first-child {
+                border: none;
+            }
+        }
+
+        a {
+            display: block;
+            color: lighten($black, 70%);
+            padding: .5em 0;
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+@include media_query(48em) {
+    .site-navigation {
+        @include width(1/2);
+        display: inline-block;
+
+        @at-root .nav-anchor {
+            padding: 1.5em .5em 0 0;
+            text-align: right;
+
+            >li {
+                width: auto;
+                border: none;
+                padding: 0 0 0 .5em;
+            }
+
+            a {
+                padding: .5em;
+            }
+        }
+    }
+}
+@include media_query(75em) {
+    .nav-anchor {
+        padding-top: 2em;
+
+        a {
+            font-size: 1.125em;
+        }
+    }
+}
+
+.goto-top {
+    position: fixed;
+    bottom: 0;
+    right: .1em;
+    font-size: 2.5em;
+    opacity: .7;
+    padding: .12em .2em;
+    cursor: pointer;
+
+    &.is-hidden {
+        display: none;
+    }
+
+    @include media_query(68.75em) {
+        & {
+            font-size: 3em;
+            bottom: .4em;
+            right: .6em;
+        }
+    }
+}

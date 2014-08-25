@@ -1,32 +1,22 @@
-<header class="site-header" id="header" role="banner">
-    <div class="header-content boxy boxy-full medium-boxy-1of2">
-        <div class="divvy">
-            <h1 class="site-title"><a href="/"></a><span>Want to learn English?</span></h1>
+<header class="site-header" id="site-header" role="banner">
+    <div class="site-headerConstraint">
+        <div class="site-banner">
+            <h1 class="site-title"><a href="/">{{ site.title | append: '.' }}</a></h1>
+            <a class="nav-toggle icon-menu2" id="nav-toggle"></a>
         </div>
-        <div class="divvy">
-            <nav class="site-navigation open" id="nav" role="navigation">
-                <h2>Site Navigation</h2>
-                <a class="nav-toggle icon-menu2" id="nav-toggle"></a>
-                <ul class="nav-anchor boxy boxy-full medium-boxy-custom">
-                    <li class="divvy">
-                        {% if page.away %}
-                        {{ "<a href='/#hire-me'>Hire me!</a>" }}
-                        {% else %}
-                        {{ "<a href='#hire-me'>Hire me!</a>" }}
-                        {% endif %}
-                    </li>
-                    <li class="divvy">
-                        {% if page.away %}
-                        {{ "<a href='/#why-me'>Why me?</a>" }}
-                        {% else %}
-                        {{ "<a href='#why-me'>Why me?</a>" }}
-                        {% endif %}
-                    </li>
-                    <li class="divvy">
-                        <a href="{{ "/about/" | prepend: site.baseurl }}">About me.</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <nav class="site-navigation is-open" id="site-nav" role="navigation">
+            <h2>Site Navigation</h2>
+            <ul class="nav-anchor">
+                <li>
+                    <a href="{% if page.away %}{{ "/#hire-me" | prepend: site.url }}{% else %}{{ "#hire-me" }}{% endif %}">Hire me!</a>
+                </li>
+                <li>
+                    <a href="{% if page.away %}{{ "/#why-me" | prepend: site.url }}{% else %}{{ "#why-me" }}{% endif %}">Why me?</a>
+                </li>
+                <li>
+                    <a href="{{ "/about" | prepend: site.url }}">About me.</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </header>

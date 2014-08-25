@@ -37,9 +37,9 @@
     });
 
     function setupMobileNav() {
-        var nav = $('#nav'),
+        var nav = $('#site-nav'),
             navToggle = $('#nav-toggle'),
-            no = 'open',
+            no = 'is-open',
             newHeight = nav.height(),
             html = $('html');
 
@@ -82,13 +82,13 @@
     }
 
     function setupGotoTop() {
-        var offset = $('#header').height(),
+        var offset = $('#site-header').height(),
             duration = 500;
         $(window).scroll(function() {
             if ($(this).scrollTop() > offset) {
-                $('.goto-top').fadeIn(duration);
+                $('.goto-top').removeClass('is-hidden').fadeIn(duration).removeAttr('style');
             } else {
-                $('.goto-top').fadeOut(duration);
+                $('.goto-top').addClass('is-hidden').fadeOut(duration).removeAttr('style');
             }
         });
     }
@@ -109,7 +109,7 @@
     }
 
     function cleanNav() {
-        $('.site-navigation').addClass('open');
+        $('.site-navigation').addClass('is-open');
     }
 
     function configSM() {

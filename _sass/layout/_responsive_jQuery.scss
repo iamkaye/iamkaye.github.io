@@ -1,0 +1,24 @@
+// based from Chris Arasin's article.
+// Firing Responsive jQuery Functions based on CSS Media Queries Rather than Window Width
+// http://www.fourfront.us/blog/jquery-window-width-and-media-queries
+
+.sm, .md, .lg {
+    display: none;
+    height: 0;
+    width: 0;
+}
+.sm {
+    display: block;
+}
+@media screen and (min-width: 48em) {
+    // Change display value from none to block.
+    .md { display: block; }
+    // Change display value from block to none.
+    .sm { display: none; }
+}
+@media screen and (min-width: 75em) {
+    // Change display value from none to block.
+    .lg { display: block; }
+    // Change display value from block to none.
+    .md { display: none; }
+}

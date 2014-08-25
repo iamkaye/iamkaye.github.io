@@ -3,14 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="paIl0YCeIXws-iWzr1Yh0BlIeqUhl_xW53Sa1OP8hV8" />
-    <meta name="author" content="Kinah Watts">
 
+    <meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ site.description }}">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ "/styles/icomoon-fonts.min.css" | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ "/styles/main.css" | prepend: site.baseurl }}">
-    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}">
-    <script src="{{ "/scripts/modernizr.flexbox.js" | prepend: site.baseurl }}"></script>
+    <link rel="stylesheet" href="{{ "/styles/app.css" | prepend: site.url }}">
+    <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.url }}">
 </head>

@@ -1,0 +1,14 @@
+// Grid sass index
+
+// Grid config defaults.
+$width: 100%;
+$columns: 5;
+// Responsive widths.
+$browser_widths: (
+        "small": 30em,
+        "medium": 48em,
+        "large": 75em
+    );
+
+// Import _grid_base.scss
+@import "grid";
