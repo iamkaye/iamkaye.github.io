@@ -1,0 +1,39 @@
+@function get_prefixes($key) {
+    @if map-has-key($css_module_prefixes, $key) {
+        @return map-get($css_module_prefixes, $key);
+    } @else {
+        @return map-keys($vendor_prefixes);
+    }
+}
+
+@function get_prefix_value($prefix) {
+    @return map-get($vendor_prefixes, $prefix);
+}
+
+@function prefix_it($value, $prefix) {
+    @return #{$prefix}#{$value};
+}
+
+@function resolve_tweener($target, $is_prop: true) {
+    @if $is_prop {
+        @if map-has-key($flexbox_tweener_props, $target) {
+            @return map-get($flexbox_tweener_props, $target);
+        }
+    } @else {
+        @if map-has-key($flexbox_tweener_values, $target) {
+            @return map-get($flexbox_tweener_values, $target);
+        }
+    }
+    @return $target;
+}
+
+@function get_flexbox_prefix($bool) {
+    @if $bool {
+        @return (ms, webkit, spec);
+    }
+    @return get_prefixes(flexbox);
+}
+
+@function width( $fraction ) {
+    @return $fraction * 100%;
+}

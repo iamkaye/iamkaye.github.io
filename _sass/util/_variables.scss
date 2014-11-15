@@ -1,0 +1,38 @@
+
+// Media query variables
+$small: 30em;
+$medium: 48em;
+$large: 80em;
+
+// Prefixing variables
+$vendor_prefixes: (
+    webkit: "-webkit-",
+    moz: "-moz-",
+    ms: "-ms-",
+    o: "-o-",
+    spec: null
+);
+$css_module_prefixes: (
+    border-radius: (webkit, moz, spec),
+    box-sizing: (webkit, moz, spec),
+    flexbox: (webkit, spec),
+    transform: (webkit, ms, spec),
+    transition: (webkit, spec)
+);
+
+// Flexbox variables
+$is_tweener: true;
+$flexbox_tweener_props: (
+    align-content: "flex-line-pack",
+    align-items: "flex-align",
+    align-self: "flex-item-align",
+    justify-content: "flex-pack",
+    order: "flex-order"
+);
+$flexbox_tweener_values: (
+    flex: "flexbox",
+    inline-flex: "inline-flexbox",
+    nowrap: "none",
+    flex-start: "start",
+    flex-end: "end"
+);

@@ -1,0 +1,91 @@
+// Media query mixins
+@mixin lo-res($min-width) {
+    @media screen and (min-width: $min-width) {
+        @content;
+    }
+}
+@mixin hi-res($min-width) {
+    @media
+    screen and (min-width: $min-width) and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-width: $min-width) and (min-resolution: 192dpi) {
+        @content;
+    }
+}
+
+// Prefixing
+@mixin prefix($declaration) {
+    @each $property, $value in $declaration {
+        $prefixes: get_prefixes($property);
+        @each $prefix in $prefixes {
+            #{prefix_it($property, get_prefix_value($prefix))}: unquote($value);
+        }
+    }
+}
+
+// Main flexbox generator.
+@mixin flexbox($declaration, $tweener) {
+    // Check if tweener is included.
+    $prefixes: get_flexbox_prefix($tweener);
+    // Iterate through the specified prefixes.
+    @each $prefix in $prefixes {
+        // Iterate through the property-value pair declaration.
+        @each $property, $value in $declaration {
+            // Check if current prefix is for "ms" and resolve.
+            @if $prefix == "ms" {
+                $property: resolve_tweener($property);
+                $value: resolve_tweener($value, false);
+            }
+            // Write the prefixed version.
+            @if $property == "display" {
+                display: #{prefix_it($value, get_prefix_value($prefix))};
+            }
+            @else {
+                #{prefix_it($property, get_prefix_value($prefix))}: unquote($value);
+            }
+        }
+    }
+}
+
+// Flexbox properties for the parent.
+@mixin display_flex($display, $tweener: $is_tweener) {
+    @include flexbox((display: $display), $tweener);
+}
+@mixin flex_direction($direction, $tweener: $is_tweener) {
+    @include flexbox((flex-direction: $direction), $tweener);
+}
+@mixin flex_wrap($flex_wrap, $tweener: $is_tweener) {
+    @include flexbox((flex-wrap: $flex_wrap), $tweener);
+}
+@mixin justify_content($justify_content, $tweener: $is_tweener) {
+    @include flexbox((justify-content: $justify_content), $tweener);
+}
+@mixin align_items($align_items, $tweener: $is_tweener) {
+    @include flexbox((align-items: $align_items), $tweener);
+}
+@mixin align_content($align_content, $tweener: $is_tweener) {
+    @include flexbox((align-content: $align_content), $tweener);
+}
+
+// Flexbox properties for the children.
+@mixin flex($flex, $tweener: $is_tweener) {
+    @include flexbox((flex: $flex), $tweener);
+}
+@mixin align_self($align_self, $tweener: $is_tweener) {
+    @include flexbox((align-self: $align_self), $tweener);
+}
+@mixin order($order, $tweener: $is_tweener) {
+    @include flexbox((order: $order), $tweener);
+}
+
+// boxy
+%boxy {
+    @include display_flex(flex);
+    @include flex_wrap(wrap);
+    text-rendering: optimizespeed;
+    width: 100%;
+}
+%divvy {
+    @include flex(1);
+    @include prefix(( box-sizing: border-box ));
+    text-rendering: auto;
+}
