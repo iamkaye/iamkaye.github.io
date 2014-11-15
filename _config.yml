@@ -6,11 +6,11 @@ email: "iammisskaye00@gmail.com"
 location: "Cebu, Philippines"
 phone: "+(63) 932-763-5395"
 tel: "tel:+639327635395"
-url: "http://iamkaye.github.io"
+url: "http://localhost:4000"
 
 # Build settings
 markdown: kramdown
 
 # SASS settings
-sass:
-    style: :compressed
+#sass:
+#    style: :compressed
