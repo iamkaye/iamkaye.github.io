@@ -1,0 +1,102 @@
+.nav-wrapper {
+    background-color: #222629;
+    position: fixed;
+    width: 80%;
+    top: 0;
+    bottom: 0;
+
+    .top {
+        overflow: hidden;
+    }
+
+    .bottom {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+}
+.nav-header {
+    @extend %boxy;
+    margin: 2em 0 1em;
+    padding: 0 1.25em;
+}
+.nav-header-item {
+    @extend %divvy;
+
+    &.img {
+        @include flex(none);
+        background-color: #f9f9f9;
+        border-radius: 50%;
+        width: 48px;
+        height: 48px;
+    }
+
+    .title {
+        font-size: 2em;
+        text-align: right;
+        letter-spacing: -2px;
+        color: #f9f9f9;
+    }
+    .subtitle {
+        font-style: italic;
+        text-align: right;
+        letter-spacing: -1px;
+        color: #656565;
+    }
+}
+.nav-bar {
+    overflow: hidden;
+
+    ul {
+        list-style: none;
+        margin: 1em 0;
+        padding: 0;
+    }
+
+    a.nav-link {
+        display: block;
+        position: relative;
+        font-size: 1em;
+        text-align: right;
+        letter-spacing: 1px;
+        color: #f9f9f9;
+        padding: 1em 1.25em;
+
+        span {
+            display: block;
+            position: absolute;
+            top: 1em;
+            color: #8f8f8f;
+        }
+
+        &.active {
+            background: rgba(0,0,0,0.15);
+            box-shadow: inset 0 0 0.25em 0 rgba(0,0,0,0.125);
+
+            span {
+                color: #43bb76;
+            }
+        }
+    }
+}
+.social-icons {
+    list-style: none;
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em 1.2em;
+    border-top: solid 1px rgba(255,255,255,0.05);
+    box-shadow: 0 -1px 0 0 rgba(0,0,0,0.15);
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        font-size: 1.25em;
+        line-height: 1.1;
+        color: #6a6a6a;
+        padding: .3em;
+    }
+}

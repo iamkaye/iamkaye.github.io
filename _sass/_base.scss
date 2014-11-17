@@ -1,5 +1,5 @@
 body {
-    font: 100%/1 sans-serif;
+    font: 100%/1 "Lato", sans-serif;
     color: #454545;
     position: relative;
     margin: 0;
@@ -7,7 +7,8 @@ body {
 a {
     background: transparent;
     text-decoration: none;
-    @include prefix(( transition: all 0.5s ease ));
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 
     &:hover, &:focus {
         outline: 0;
@@ -22,5 +23,7 @@ img {
     border: 0;
 }
 * {
-    @include prefix(( box-sizing: border-box ));
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
