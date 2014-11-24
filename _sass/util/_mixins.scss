@@ -1,13 +1,28 @@
 // Media query mixins
-@mixin lo-res($min-width) {
+@mixin media-width($min-width) {
     @media screen and (min-width: $min-width) {
         @content;
     }
 }
-@mixin hi-res($min-width) {
+@mixin media-max-width($max-width) {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+@mixin media-height($min-height) {
+    @media screen and (min-height: $min-height) {
+        @content;
+    }
+}
+@mixin media-max-height($max-height) {
+    @media screen and (max-height: $max-height) {
+        @content;
+    }
+}
+@mixin media-retina($dpr: 2, $dpi: 192dpi) {
     @media
-    screen and (min-width: $min-width) and (-webkit-min-device-pixel-ratio: 2),
-    screen and (min-width: $min-width) and (min-resolution: 192dpi) {
+    screen and (-webkit-min-device-pixel-ratio: $dpr),
+    screen and (min-resolution: $dpi) {
         @content;
     }
 }
