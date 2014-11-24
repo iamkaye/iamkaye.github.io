@@ -5,16 +5,12 @@
 
 <body>
 
-    <!-- {% include header.html %} -->
-
-    <div class="main-content" role="main">
+    <div class="container" role="main">
         {{ content }}
     </div>
+
     {% include nav.html %}
-    <!-- {% include footer.html %} -->
-
-    <span class="sm"></span><span class="md"></span><span class="lg"></span>
-
+    
     <script src="{{ "/assets/js/domm.js" | prepend: site.url }}"></script>
     <script src="{{ "/assets/js/app.js" | preped: site.url }}"></script>
 </body>
