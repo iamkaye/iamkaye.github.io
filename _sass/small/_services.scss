@@ -1,0 +1,63 @@
+.services {
+    background: #cedfe9 url("../images/overlay.png");
+    padding: 3em 0;
+    overflow: hidden;
+    
+    p {
+        font-size: 1em;
+        color: #575757;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+.learn {
+    margin: .8em 0 0;
+    overflow: hidden;
+    
+    p {
+        margin-bottom: 1em;
+    }
+}
+.perks {
+    margin: 3em 0 0;
+    overflow: hidden;
+    
+    .subtitle {
+        position: relative;
+        
+        span {
+            font-size: 2.5em;
+            display: block;
+            position: relative;
+            top: -5px;
+            
+            &.icon-thumbs-ok {
+                color: #43bb76;
+            }
+            &.icon-key-o {
+                color: #f0383b;
+            }
+            &.icon-edit {
+                color: #2683EB;
+            }
+            &.icon-money {
+                color: #605f46;
+            }
+        }
+    }
+    
+    em {
+        border-bottom: 2px dotted #43bb76;
+    }
+}
+.title {
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+    margin: 0 0 .5em;
+}
+.subtitle {
+    font-weight: 200;
+    text-align: center;
+    margin: 2em 0 .75em;
+}

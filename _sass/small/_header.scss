@@ -1,0 +1,36 @@
+.container {
+    background-color: #fff;
+}
+.constraint {
+    padding: 0 1.5em;
+    overflow: hidden;
+}
+
+.header {
+    background: url("../images/wanderlust.jpg") no-repeat center center;
+    @include prefix((background-size: cover));
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.header-constraint {
+    position: absolute;
+    top: 65%;
+    width: 100%;
+}
+.site-title {
+    font-size: 4em;
+    font-weight: 200;
+    text-align: center;
+    color: #f9f9f9;
+    letter-spacing: -4px;
+    word-spacing: 6px;
+    margin: 0 0 .1em;
+}
+.site-subtitle {
+    font-size: 1em;
+    font-style: italic;
+    text-align: center;
+    color: #f9f9f9;
+    margin: 0 0 .25em;
+}
